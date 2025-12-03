@@ -1,0 +1,130 @@
+syntax = "proto3";
+
+package device_management;
+
+
+service DeviceManagementService {
+  rpc RegisterDevice(RegisterDeviceRequest) returns (RegisterDeviceResponse);
+  
+  rpc SetDeviceStatus(SetDeviceStatusRequest) returns (SetDeviceStatusResponse);
+  
+  rpc GetDeviceInfo(GetDeviceInfoRequest) returns (GetDeviceInfoResponse);
+  rpc InitiateDeviceAction(InitiateDeviceActionRequest) returns (InitiateDeviceActionResponse);
+  rpc GetDeviceActionStatus(GetDeviceActionStatusRequest) returns (GetDeviceActionStatusResponse);
+  rpc ListDevices(ListDevicesRequest) returns (ListDevicesResponse);
+}
+
+enum DeviceStatus {
+  DEVICE_STATUS_UNKNOWN = 0;  
+  IDLE = 1;                    
+  BUSY = 2;                  
+  OFFLINE = 3;                 
+  MAINTENANCE = 4;             
+  UPDATING = 5;                
+  RECOVERING = 6;             
+  ERROR = 7;                   
+}
+
+enum ActionType {
+  ACTION_TYPE_UNKNOWN = 0;
+  SOFTWARE_UPDATE = 1;        
+  FIRMWARE_UPDATE = 2;       
+  SYSTEM_REBOOT = 3;          
+  CONFIGURATION_CHANGE = 4;   
+}
+
+enum ActionStatus {
+  ACTION_STATUS_UNKNOWN = 0;
+  PENDING = 1;                 
+  RUNNING = 2;                 
+  COMPLETED = 3;              
+  FAILED = 4;                  
+}
+message RegisterDeviceRequest {
+  string device_id = 1;        
+  DeviceStatus initial_status = 2;  
+  string device_name = 3;      
+  string device_type = 4;      
+}
+
+message RegisterDeviceResponse {
+  bool success = 1;            
+  string message = 2;          
+  string device_id = 3;        
+}
+
+message SetDeviceStatusRequest {
+  string device_id = 1;       
+  DeviceStatus status = 2;    
+}
+
+message SetDeviceStatusResponse {
+  bool success = 1;           
+  string message = 2;          
+  DeviceStatus previous_status = 3;  
+  DeviceStatus current_status = 4;   
+}
+
+message GetDeviceInfoRequest {
+  string device_id = 1;       
+}
+
+message DeviceInfo {
+  string device_id = 1;       
+  DeviceStatus status = 2;    
+  string device_name = 3;     
+  string device_type = 4;     
+  int64 registered_at = 5;    
+  int64 last_updated = 6;     
+  string current_action_id = 7;  
+}
+
+message GetDeviceInfoResponse {
+  bool success = 1;           
+  string message = 2;          
+  DeviceInfo device_info = 3;  
+}
+
+message InitiateDeviceActionRequest {
+  string device_id = 1;       
+  ActionType action_type = 2;  
+  map<string, string> action_params = 3;  
+}
+
+message InitiateDeviceActionResponse {
+  bool success = 1;           
+  string message = 2;          
+  string action_id = 3;       
+  ActionStatus action_status = 4;  
+}
+
+message GetDeviceActionStatusRequest {
+  string action_id = 1;       
+}
+
+message ActionInfo {
+  string action_id = 1;       
+  string device_id = 2;       
+  ActionType action_type = 3; 
+  ActionStatus status = 4;    
+  map<string, string> action_params = 5;  
+  int64 initiated_at = 6;     
+  int64 completed_at = 7;     
+  string error_message = 8;  
+}
+
+message GetDeviceActionStatusResponse {
+  bool success = 1;           
+  string message = 2;          
+  ActionInfo action_info = 3;  
+}
+
+message ListDevicesRequest {
+}
+
+message ListDevicesResponse {
+  bool success = 1;           
+  string message = 2;          
+  repeated DeviceInfo devices = 3;  
+}
+
