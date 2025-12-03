@@ -1,0 +1,41 @@
+# Build artifacts
+backend/build/
+backend/CMakeFiles/
+backend/CMakeCache.txt
+backend/cmake_install.cmake
+backend/Makefile
+backend/*.cmake
+
+# Generated code
+backend/build/generated/
+cli/generated/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Compiled binaries
+*.o
+*.a
+*.exe
+*.dll
+*.dylib
+
