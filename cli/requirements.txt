@@ -1,0 +1,7 @@
+# Python dependencies for Device Fleet Management CLI
+# Install with: pip install -r requirements.txt
+
+grpcio>=1.60.0          # gRPC Python library
+grpcio-tools>=1.60.0    # Protocol Buffers compiler for Python
+protobuf>=4.25.0         # Protocol Buffers Python library
+argparse                 # Command-line argument parsing (built-in, but listed for clarity)
