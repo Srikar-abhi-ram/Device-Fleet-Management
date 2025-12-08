@@ -728,15 +728,13 @@ Solution: chmod +x setup.sh generate_grpc_code.sh build.sh
 ### Backend Output
 <img width="733" height="304" alt="Backend Output" src="https://github.com/user-attachments/assets/51858e51-80e9-43e5-8ba9-eb31efd006f4" />
 
-
-### 1. Register Device
-
-<img width="817" height="287" alt="Register Device" src="https://github.com/user-attachments/assets/dc0b6f30-54ae-4688-a3fe-1ad7f1414a6d" />
-
-
-### 2. List Devices
+### 1. List Devices
 <img width="1148" height="171" alt="list" src="https://github.com/user-attachments/assets/9e6e3326-52e3-4d10-9a9d-4a3f6be399be" />
 
+
+### 2. Register Device
+
+<img width="817" height="287" alt="Register Device" src="https://github.com/user-attachments/assets/dc0b6f30-54ae-4688-a3fe-1ad7f1414a6d" />
 
 ### 3. Get Device Info
 <img width="714" height="158" alt="Get Info" src="https://github.com/user-attachments/assets/f4f2885f-082f-47e9-b5a1-4964d9e9152a" />
