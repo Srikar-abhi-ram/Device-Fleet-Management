@@ -730,29 +730,26 @@ Solution: chmod +x setup.sh generate_grpc_code.sh build.sh
 
 
 ### 1. Register Device
-![Register Device](images/register.png)
 
 <img width="817" height="287" alt="Register Device" src="https://github.com/user-attachments/assets/dc0b6f30-54ae-4688-a3fe-1ad7f1414a6d" />
 
 
 ### 2. List Devices
-![List Devices](images/list.png)
 <img width="1148" height="171" alt="list" src="https://github.com/user-attachments/assets/9e6e3326-52e3-4d10-9a9d-4a3f6be399be" />
 
 
 ### 3. Get Device Info
-![Get Device Info](images/get_info.png)
 <img width="714" height="158" alt="Get Info" src="https://github.com/user-attachments/assets/f4f2885f-082f-47e9-b5a1-4964d9e9152a" />
 
 ### 4. Set Device Status
-![Set Device Status](images/set_status.png)
+
 <img width="658" height="207" alt="Set Status" src="https://github.com/user-attachments/assets/7f69f106-aed8-4008-ad6e-66d98d86dfbd" />
 
 ### 5. Initiate Action
-![Initiate Action](images/initiate_action.png)
+
 <img width="712" height="190" alt="initiate action" src="https://github.com/user-attachments/assets/b0e17f25-a6a6-4260-b454-db27254f7438" />
 
 ### 6. Get Action Info
-![Poll Action Status](images/poll_action.png)
+
 <img width="579" height="204" alt="Action info" src="https://github.com/user-attachments/assets/62be7f00-aaee-4729-a1f3-ec4f43f468ff" />
 
