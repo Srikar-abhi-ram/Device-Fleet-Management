@@ -18,6 +18,7 @@ A production-ready, enterprise-level device fleet management system with a C++ g
 - [Assumptions and Simplifications](#assumptions-and-simplifications)
 - [Future Improvements](#future-improvements)
 - [Troubleshooting](#troubleshooting)
+- [Outputs](#Outputs)
 
 ## Overview
 
@@ -723,3 +724,23 @@ Solution:
 ```
 Solution: chmod +x setup.sh generate_grpc_code.sh build.sh
 ```
+## Outputs
+
+### 1. Register Device
+![Register Device](images/register.png)
+
+### 2. List Devices
+![List Devices](images/list.png)
+
+### 3. Get Device Info
+![Get Device Info](images/get_info.png)
+
+### 4. Set Device Status
+![Set Device Status](images/set_status.png)
+
+### 5. Initiate Action
+![Initiate Action](images/initiate_action.png)
+
+### 6. Poll Action Status
+![Poll Action Status](images/poll_action.png)
+
